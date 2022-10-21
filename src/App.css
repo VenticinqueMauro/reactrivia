@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Peralta&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url('./img/fondo.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.666);
+}
+
+button:hover{
+    transform: translate(-0.05em, -0.05em);
+}
+
+button:active{
+    transform: translate(0.05em, 0.05em);
+}
+
+.correcto {
+    background-color: #86efac;
+}
+
+.correcto:hover {
+    background-color: #86efac;
+}
+
+
+.incorrecto {
+    background-color: #f87171;
+}
+
+.incorrecto:hover {
+    background-color: #f87171;
+}
+
+.titulo {
+    font-family: 'Peralta', cursive;
+    font-weight: bold;
+}
+
+
+/* From uiverse.io by @adamgiebl */
+.btnConfirm {
+    background: #FBCA1F;
+    font-family: inherit;
+    padding: 0.6em 1.3em;
+    font-weight: 900;
+    font-size: 18px;
+    border: 3px solid black;
+    border-radius: 0.4em;
+    box-shadow: 0.1em 0.1em;
+}
+
+.btnConfirm:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
+}
+
+.btnConfirm:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em;
+}
+
+
+.btnConfirm:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
+}
+
+.btnConfirm:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em;
+}
+
+/* From uiverse.io by @david-mohseni */
+.wrapper {
+    display: inline-flex;
+    list-style: none;
+    height: 120px;
+    width: 100%;
+    padding-top: 40px;
+    font-family: "Poppins", sans-serif;
+    justify-content: center;
+}
+
+.wrapper .icon {
+    position: relative;
+    background: rgba(255, 255, 255, 0.168);
+    border-radius: 50%;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: -1px 1px 8px rgba(0, 0, 0, 0.452);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #fff;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .linkedIn:hover,
+.wrapper .linkedIn:hover .tooltip,
+.wrapper .linkedIn:hover .tooltip::before {
+    background: #0e76a8;
+    color: #fff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+    background: #1DA1F2;
+    color: #fff;
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+    background: #171515;
+    color: #fff;
+}
+
+/* EFECTO PARPADEO  */
+
+.texto {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.parpadea {
+
+    animation-name: parpadeo;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    -webkit-animation-name: parpadeo;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+}
+
+@-moz-keyframes parpadeo {
+    0% {
+        opacity: 1.0;
+    }
+
+    50% {
+        opacity: 0.0;
+    }
+
+    100% {
+        opacity: 1.0;
+    }
+}
+
+@-webkit-keyframes parpadeo {
+    0% {
+        opacity: 1.0;
+    }
+
+    50% {
+        opacity: 0.0;
+    }
+
+    100% {
+        opacity: 1.0;
+    }
+}
+
+@keyframes parpadeo {
+    0% {
+        opacity: 1.0;
+    }
+
+    50% {
+        opacity: 0.0;
+    }
+
+    100% {
+        opacity: 1.0;
+    }
+}
+
+/* From uiverse.io by @Jaareet */
+.input {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #1c1c1e;
+    box-shadow: 0 0 .4vw #00000080, 0 0 0 .15vw transparent;
+    border-radius: 0.4vw;
+    border: none;
+    outline: none;
+    padding: 0.4vw;
+    max-width: 190px;
+    transition: .4s;
+}
+
+.input:hover {
+    box-shadow: 0 0 0 .15vw #87cfeb2f;
+}
+
+.input:focus {
+    box-shadow: 0 0 0 .15vw #000;
+}
+
+#inputMinimo {
+    display: none;
+}
+
+.faltaCompletar {
+    display: block;
+}
+
+/* USERNAME */
+
+.userName {
+    font-family: 'Peralta', cursive;
+    font-weight: bold;
+}
+
+
+/* From uiverse.io by @NorthFishHasNa */
+.btnLogin {
+    display: inline-block;
+    border-radius: 10px;
+    background-color: #1e293b;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 17px;
+    padding: 16px;
+    width: 130px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.btnLogin .spanLogin {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.btnLogin .spanLogin:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -15px;
+    transition: 0.5s;
+}
+
+.btnLogin:hover .spanLogin {
+    padding-right: 15px;
+}
+
+.btnLogin:hover .spanLogin:after {
+    opacity: 1;
+    right: 0;
+}
+
+
+/* PLAYER NAME  */
+
+.playerName {
+    font-family: 'Peralta', cursive;
+    font-weight: bold;
+}
+
+
+.profile {
+    border-radius: 73px 73px 73px 73px;
+    -moz-border-radius: 73px 73px 73px 73px;
+    -webkit-border-radius: 73px 73px 73px 73px;
+    border: 0px solid #000000;
+    transition: 200ms;
+    cursor: pointer;
+    font-family: 'Peralta', cursive;
+    text-shadow: -1px 1px 3px #000;
+    /* background-color: #00000077; */
+    box-shadow: -2px 1px 5px #000;
+}
+
+.profile:hover {
+    transform: scale(1.1);
+}
+
+.containerRanking {
+    font-family: 'Peralta', cursive;
+    text-shadow: 0px 0px 2px #000;
+}
+
+.rankingPos {
+    width: 450px;
+    /* border: solid 1px #000; */
+}
+
+.rankingIcons {
+    text-shadow: -1px 0px 2px #000;
+}
+
+.textScore {
+    text-shadow: -1px 1px 1px #000;
+}
+
+.borderRanking {
+    border-radius: 83px 83px 83px 83px;
+    -moz-border-radius: 83px 83px 83px 83px;
+    -webkit-border-radius: 83px 83px 83px 83px;
+    border: 0px solid #000000;
+    box-shadow: -2px 2px 10px #000;
+    background-color: rgba(0, 0, 0, 0.619);
+}
+
+.btnVolver {
+    transition: 300ms;
+}
+
+.btnVolver:hover {
+    transform: scale(1.1);
+}
+
+.top5{
+    font-family: 'Peralta', cursive;
+    text-shadow: 0px 0px 3px #000;
+}
+
+.btnTop5{
+    transition: 300ms;
+}
+
+.btnTop5:hover{
+    transform: scale(1.1);
+}
+
+.noShadow{
+    text-shadow: none;
+}
